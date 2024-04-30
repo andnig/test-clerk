@@ -1,25 +1,29 @@
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
-import './globals.css';
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+import "./globals.css";
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode;
 }) {
-    return (
-        <ClerkProvider signInForceRedirectUrl={"/?7"}>
-            <html lang="en">
-                <body>
-                    <header>
-                        <SignedIn>
-                            <UserButton />
-                        </SignedIn>
-                    </header>
-                    <main>
-                        {children}
-                    </main>
-                </body>
-            </html>
-        </ClerkProvider>
-    )
+  return (
+    <ClerkProvider afterSignInUrl={"/"}>
+      <html lang="en">
+        <body>
+          <header>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </header>
+          <main>{children}</main>
+        </body>
+      </html>
+    </ClerkProvider>
+  );
 }
