@@ -7,7 +7,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <ClerkProvider>
+        <ClerkProvider signInForceRedirectUrl={"/?7"}>
             <html lang="en">
                 <body>
                     <header>
