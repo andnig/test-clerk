@@ -10,7 +10,7 @@ export default function SignInPage({
 }) {
     return (
         <div className="">
-            <SignIn fallbackRedirectUrl="/?8" />
+            <SignIn />
         </div>
     )
 }
