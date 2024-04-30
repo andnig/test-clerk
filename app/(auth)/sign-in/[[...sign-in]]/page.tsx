@@ -10,7 +10,7 @@ export default function SignInPage({
 }) {
     return (
         <div className="">
-            <SignIn />
+            <SignIn afterSignInUrl={"/?9"} />
         </div>
     )
 }
